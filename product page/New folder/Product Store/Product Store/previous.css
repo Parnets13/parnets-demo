@@ -1,0 +1,215 @@
+/**
+ * Global Styles
+ *
+ * @format
+ */
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navbar Section */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #001e38;
+    padding: 10px 20px; /* Adjusted for smaller screens */
+  }
+  .logo img {
+    height: 60px; /* Reduced size for smaller screens */
+    cursor: pointer;
+  }
+  .nav-items {
+    display: flex;
+    cursor: pointer;
+  }
+  .nav-items li {
+    color: whitesmoke;
+    font-weight: lighter;
+    list-style: none;
+    margin: 0 10px; /* Reduced margin */
+    font-size: 18px; /* Reduced font size */
+  }
+  
+  /* Product Section */
+  .product-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .image-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .main-img {
+    width: 100%; /* Responsive width */
+    max-width: 600px; /* Max width for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px;
+  }
+  
+  .thumbnail-carousel {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%; /* Full width */
+    max-width: 600px; /* Max width */
+  }
+  
+  .thumbnail-section {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    width: 100%;
+  }
+  
+  .thumbnail {
+    width: 100px; /* Responsive width */
+    height: 100px; /* Responsive height */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .thumbnail:hover {
+    transform: scale(1.1);
+  }
+  
+  .arrow {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .left-arrow,
+  .right-arrow {
+    display: none; /* Hide by default */
+  }
+  
+  .product-details {
+    width: 40%;
+    padding: 20px;
+  }
+  
+  .price {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .original-price {
+    text-decoration: line-through;
+    font-size: 16px;
+    color: gray;
+    margin-top: 10px;
+  }
+  
+  .mrp {
+    color: gray;
+    margin-bottom: 10px;
+  }
+  
+  #quantity {
+    width: 40px;
+    font-weight: 500;
+  }
+  
+  .quantity-selector {
+    margin: 10px 0;
+  }
+  
+  .quantity-selector label {
+    font-size: 16px; /* Adjusted font size */
+    font-weight: 400;
+    margin: 10px 0;
+  }
+  
+  #add-to-cart-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #add-to-cart-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .product-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .image-section {
+      width: 100%;
+    }
+  
+    .product-details {
+      width: 100%;
+    }
+  
+    .thumbnail-section {
+      flex-direction: row;
+      overflow-x: auto; /* Enable horizontal scrolling */
+    }
+  
+    .thumbnail {
+      width: 70px; /* Smaller thumbnails */
+      height: 70px;
+    }
+  
+    .left-arrow,
+    .right-arrow {
+      display: block; /* Show arrows on mobile */
+    }
+  }
+  
+  /* Extra small devices */
+  @media (max-width: 480px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-items {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-items li {
+      margin: 5px 0; /* Reduced margin for mobile */
+    }
+  
+    .price {
+      font-size: 20px; /* Smaller font size */
+    }
+  
+    .original-price,
+    .mrp {
+      font-size: 14px; /* Smaller font size */
+    }
+  
+    #add-to-cart-btn {
+      width: 100%; /* Full width button */
+      padding: 15px; /* Increased padding */
+    }
+  }
+  
